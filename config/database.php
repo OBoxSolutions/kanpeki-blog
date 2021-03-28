@@ -48,12 +48,14 @@ return [
 
         'sqlite' => [
             'driver'   => 'sqlite',
+            'url' => env('DATABASE_URL'),
             'database' => env('DB_DATABASE', 'storage/database.sqlite'),
             'prefix'   => '',
         ],
 
         'mysql' => [
             'driver'     => 'mysql',
+            'url' => env('DATABASE_URL'),
             'engine'     => 'InnoDB',
             'host' => env('DB_HOST', 'localhost'),
             'port' => env('DB_PORT', 3306),
@@ -68,6 +70,7 @@ return [
 
         'pgsql' => [
             'driver'   => 'pgsql',
+            'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST', 'localhost'),
             'port' => env('DB_PORT', 5432),
             'database' => env('DB_DATABASE', 'database'),
@@ -80,6 +83,7 @@ return [
 
         'sqlsrv' => [
             'driver'   => 'sqlsrv',
+            'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST', 'localhost'),
             'port' => env('DB_PORT', 5432),
             'database' => env('DB_DATABASE', 'database'),
